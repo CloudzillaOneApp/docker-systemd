@@ -4,7 +4,7 @@ ENV container docker
 
 RUN apt-get update && apt-get install -y dbus systemd && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-#RUN systemctl set-default multi-user.target
+RUN systemctl set-default multi-user.target
 
 COPY setup /sbin/
 
